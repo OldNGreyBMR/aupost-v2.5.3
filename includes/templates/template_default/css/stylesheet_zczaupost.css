@@ -1,0 +1,48 @@
+/**
+ * Au Post debugging  Stylesheet
+ * 2022-07-27 BMH introduced to clearly differentiate debugging
+ *
+ */
+.aupost-debug {
+    font-size: 0.9em;
+    line-height:1.1em;
+    color: maroon;
+    
+}
+.aupost-debug1 textarea {
+    font-size: 0.9em;
+    line-height:1.0em;
+    color: maroon;
+    width :auto;
+    min-width: 55em;
+    max-width: 100%;
+    height:auto;
+    min-height:30em;
+    overflow:auto; /* allows the box to start with no scrollbars */
+    margin:0;
+    
+}
+.aupost-debug textarea {
+    font-size: 0.9em;
+    line-height:1.0em;
+    color: maroon;
+    width :auto;
+    min-width: 35em;
+    max-width: 100%;
+    height:auto;
+    min-height:30em;
+    overflow:auto; /* allows the box to start with no scrollbars */
+    margin:0;
+}
+.aupost-debug code {
+        font-size: 1em;
+    line-height:1.0em;
+    color: maroon;
+}
+
+table.aupost-debug-table {
+        border: 1px solid maroon;
+        width: 95%;
+        color: maroon;
+}
+
