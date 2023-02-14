@@ -1,9 +1,9 @@
 # aupost
- Australia Post API plugin for Zen Cart
+ aupost zen cart Australia postage plug in
 ----------------------------------
-Australia Post Shipping Module 2.5.2
+Australia Post Shipping Module 2.5.3
 ----------------------------------
-Updated 02 February 2023 by OldNgrey BMH
+Updated: 14 Feb 2023 by browe BMH
 Updated: 22 October 2022 by browe BMH
 Updated: 09 August 2022 by browe BMH
 Updated: 31 July 2022 by browe BMH
@@ -13,7 +13,7 @@ Updated: 02 November 2016 by foobic
 Updated: 14 March 2013 by http://www.avantmarketing.com.au
 Original Copyright (c) 2007-2009 Rod Gasson / VCSWEB
 
-This version tested on Zen Cart version 1.5.8 and PHP 8.2 
+This version tested on Zen Cart version 1.5.8 and PHP 7.4, 8.0, 8.1, 8.2; 
 ----------------------------------
 
 This module uses the new Australia Post API to get valid quotes for letters and parcels directly from the Australia Post server.
@@ -105,7 +105,8 @@ To use this module, you must obtain a 36 digit API Key from the Auspost Developm
 ===============
 3.1 Make sure you have entered your own postcode in your Zen Cart admin by going to: Configuration > shipping/packaging > postal code 
 3.2 Upload the 'includes' folder to the root folder of your Zen Cart store.
-3.3 A CSS file is uploaded to \includes\templates\template_default\css\. A new icon file is uploaded \includes\templates\template_default\images\icons. Upload the icons folder and the css folder to the template use don you site.
+3.3 A CSS file is uploaded to \includes\templates\template_default\css\. A new icon file is uploaded \includes\templates\template_default\images\icons. 
+        Upload the icons folder and the css folder to the template use don you site.
 3.4 In Admin go to: modules > shipping > Australia Post > click install
 3.5 Under 'Auspost API Key', enter your 36 digit API key.
 3.6 Add the Tax Class defined in Zen Cart. Australian Postage includes GST. Overseas postage is GST exempt (tax free).
@@ -117,7 +118,8 @@ Congratulations! You have now successfully installed the Australia Post Shipping
 =========================
 4.1 Select the postage options you wish to offer to cuctomers.
 4.2 Add handling fees if you factor in costs for material and packaging.
-4.3 Cost on error is the default if a valid postage rate is not returned or the Australia Post servers cannot be reached. I recommend an amount large enough to cover most postage and that will be obvious eg 99.99.
+4.3 Cost on error is the default if a valid postage rate is not returned or the Australia Post servers cannot be reached. I recommend an amount 
+        large enough to cover most postage and that will be obvious eg 99.99.
 4.4 The Tare percent allows for weight of packaging etc when requesting postage rates. The default is 10.
 
 5   Configuration - Australia Post International
@@ -145,5 +147,12 @@ Changelog Version 2.4.2
 -------------------------------------------------
 See separate file CHANGELOG.md
 
-
-
+Tax (GST) Calculations
+----------------------
+Australia Post postage rates to Australian destination includes GST. This is taken into account in the module by providing the GST exempt 
+    price to Zen Cart and letting Zen Cart process the tax according to teh rules you have defined. The tax-basis returned by aupost is "Shipping" 
+    so ensure that the setting Admin | Configuration | My Store | Basis of Shipping Tax is set to Shipping and that the Tax Class set in Admin | Modules |shipping |aupost 
+    is set to your tax rate that covers GST.
+Australia Post postage rates to overseas destinations does not include GST. Set your Tax Class in Admin | Modules |shipping |aupostoverseas
+    to your tax rate that does not include GST.
+    
