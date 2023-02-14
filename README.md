@@ -143,7 +143,7 @@ A complete removal and reinstall is recommended.
 5. Re-enter Australia Post API key and other settings.
 
 ====================================================
-Changelog Version 2.4.2
+Changelog Version 2.5.3
 -------------------------------------------------
 See separate file CHANGELOG.md
 
@@ -155,4 +155,8 @@ Australia Post postage rates to Australian destination includes GST. This is tak
     is set to your tax rate that covers GST.
 Australia Post postage rates to overseas destinations does not include GST. Set your Tax Class in Admin | Modules |shipping |aupostoverseas
     to your tax rate that does not include GST.
-    
+
+Parcel sizing calculations
+==========================
+NOTE: The sizing calculations are primitive eg dimensions are totalled so many small items are made into one long parcel.
+  
